@@ -1,3 +1,6 @@
+/*Author :  Venkatramana Reddy Araveeti
+ * 
+ */
 package com.appium.demo.rbc.appiumrbcdemo.pages;
 
 import io.appium.java_client.AppiumDriver;
@@ -9,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage {
+public class HomePage extends MobileActionMethods{
 	
 	 private AppiumDriver<AndroidElement> driver;
 	 
@@ -17,6 +20,7 @@ public class HomePage {
 	    //Initilize the Elements using Page Factory
 	    
 	    public HomePage(AndroidDriver<AndroidElement> driver) {
+	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    }
@@ -33,8 +37,10 @@ public class HomePage {
 	    	
 	    	boolean blnVerify = false;
 	    	try {
-	    		btnHamburger.click();
-	    		btnShopBy.click();
+	    		//btnHamburger.click();
+	    		click(btnHamburger);
+	    		click(btnShopBy);
+	    		//btnShopBy.click();
 	    		blnVerify = true;
 	    	}
 	    	catch(Exception e) {
@@ -44,20 +50,6 @@ public class HomePage {
 	    	return blnVerify;
 	    }
 	    
-	
-	    public boolean waitForElement() {
-	    	boolean isVerify  = false;
-	    	try {
-	    	WebDriverWait wait = new WebDriverWait(driver, 10);
-	        wait.until(ExpectedConditions.visibilityOf(btnShopBy));
-	        isVerify =  true;
-	    	}
-	    	catch(Exception e) {
-	    		e.getMessage();
-	    		
-	    	}
-	    	return isVerify;
-	    }
 	   
 }
 

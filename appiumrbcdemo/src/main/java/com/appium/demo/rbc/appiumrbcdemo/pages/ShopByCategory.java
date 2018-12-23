@@ -1,3 +1,6 @@
+/*Author :  Venkatramana Reddy Araveeti
+ * 
+ */
 package com.appium.demo.rbc.appiumrbcdemo.pages;
 
 import io.appium.java_client.AppiumDriver;
@@ -12,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class ShopByCategory {
+public class ShopByCategory extends MobileActionMethods{
 	
 	 private AppiumDriver<AndroidElement> driver;
 	 
@@ -20,6 +23,7 @@ public class ShopByCategory {
 	    //Initilize the Elements using Page Factory
 	    
 	    public ShopByCategory(AndroidDriver<AndroidElement> driver) {
+	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    }
@@ -43,7 +47,8 @@ public class ShopByCategory {
 	    	
 	    	boolean blnVerify = false;
 	    	try {
-	    		btnKindle.click();
+	    		click(btnKindle);
+	    		//btnKindle.click();
 	    		btnEreader.click();
 	    		blnVerify = true;
 	    	}
