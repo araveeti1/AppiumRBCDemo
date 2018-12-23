@@ -2,16 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41188" started-at="2018-12-23T02:21:45Z" finished-at="2018-12-23T02:22:26Z">
+  <suite name="Suite" duration-ms="45699" started-at="2018-12-23T15:33:02Z" finished-at="2018-12-23T15:33:47Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41188" started-at="2018-12-23T02:21:45Z" finished-at="2018-12-23T02:22:26Z">
+    <test name="Test" duration-ms="45699" started-at="2018-12-23T15:33:02Z" finished-at="2018-12-23T15:33:47Z">
       <class name="com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@14bf9759]" name="init" is-config="true" duration-ms="16955" started-at="2018-12-23T02:21:45Z" finished-at="2018-12-23T02:22:02Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@4387b79e]" name="setup" is-config="true" duration-ms="208" started-at="2018-12-23T15:33:02Z" finished-at="2018-12-23T15:33:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@63192798]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@4387b79e]" name="init" is-config="true" duration-ms="21426" started-at="2018-12-23T15:33:02Z" finished-at="2018-12-23T15:33:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="verifyKindleItems()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@14bf9759]" name="verifyKindleItems" duration-ms="24204" started-at="2018-12-23T02:22:02Z" finished-at="2018-12-23T02:22:26Z">
+        <test-method status="PASS" signature="verifyKindleItems()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@4387b79e]" name="verifyKindleItems" duration-ms="23879" started-at="2018-12-23T15:33:23Z" finished-at="2018-12-23T15:33:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyKindleItems -->
