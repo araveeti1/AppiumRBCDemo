@@ -33,7 +33,11 @@
     <artifactId>selenium-api</artifactId>
     <version>3.141.59</version>
 </dependency>
-
+<dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
+    </dependency>
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>

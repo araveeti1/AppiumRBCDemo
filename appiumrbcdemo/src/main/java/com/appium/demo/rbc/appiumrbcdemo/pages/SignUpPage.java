@@ -30,11 +30,12 @@ public class SignUpPage extends MobileActionMethods{
 		 boolean blnVerify = false;
 		 try {
 			 click(btnSkipSignin);
-			// btnSkipSignin.click();
+			 log.info("Successfully clicked on the Skip Sign in Button");
 			 blnVerify = true;
 		 }
 		 catch(Exception e) {
 			 e.printStackTrace();
+			 log.error("Failed to click the Skip Sign in button");
 		 }
 		 return blnVerify;
 	  }

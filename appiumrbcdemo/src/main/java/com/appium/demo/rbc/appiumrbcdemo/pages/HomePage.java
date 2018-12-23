@@ -37,14 +37,14 @@ public class HomePage extends MobileActionMethods{
 	    	
 	    	boolean blnVerify = false;
 	    	try {
-	    		//btnHamburger.click();
 	    		click(btnHamburger);
 	    		click(btnShopBy);
-	    		//btnShopBy.click();
+	    		log.info("Successfully navigated to the Shop by Category screen");
 	    		blnVerify = true;
 	    	}
 	    	catch(Exception e) {
 	    		e.printStackTrace();
+	    		log.error("Failed to navigate to the Shop by Category Screen");
 	    		
 	    	}
 	    	return blnVerify;

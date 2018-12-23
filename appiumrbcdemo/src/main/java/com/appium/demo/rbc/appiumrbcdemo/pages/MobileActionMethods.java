@@ -9,7 +9,8 @@ import java.util.HashMap;
 
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.commons.logging.Log;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -28,6 +29,9 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class MobileActionMethods {
 	 private AppiumDriver<AndroidElement> driver;
+	 
+	 protected static Logger log = Logger.getLogger(Log.class.getName());
+	 
 
 	
 	 public MobileActionMethods(AndroidDriver<AndroidElement> driver) {
@@ -45,13 +49,17 @@ public class MobileActionMethods {
 		try {
 				waitForElementClickable(objElement);
 				objElement.click();
+				log.info("The element" + objElement + " Has been clicked successfully");
 				isVerify = true;
 		} catch (IllegalArgumentException e) {
-			//Add the Logging statements -  using Log4j
+			log.error(" Exception is thrown at run time");
 
 		} catch (NoSuchElementException n) {
+			log.error("No such Element Exception");
 
 		} catch (Exception e) {
+			log.error("An Exception is thrown at run time ");
+
 
 		}
 		return isVerify;
@@ -68,8 +76,12 @@ public class MobileActionMethods {
 			waitForElementClickable(objElement);
 			objElement.clear();
 			objElement.sendKeys(sTextToSend);
+			log.info("The Text is entered Successfully");
 			isVerify = true;
+			
 		} catch (IllegalArgumentException e) {
+			log.error("An Exception is thrown at run time ");
+
 			throw e;
 		} catch (TimeoutException e) {
 			throw e;
@@ -160,6 +172,7 @@ public void swipeJavaScript(MobileElement mobile) {
 
 public boolean waitForElementClickable(MobileElement objElement) {
 	boolean isVerify =  false;
+	log.info("Waiting for the element  ::" + objElement);
 	try {
 	WebDriverWait wait = new WebDriverWait((AppiumDriver) driver, 10L);
 	wait.until(ExpectedConditions.elementToBeClickable(objElement));

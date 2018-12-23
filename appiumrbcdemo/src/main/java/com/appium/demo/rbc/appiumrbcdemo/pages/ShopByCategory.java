@@ -48,8 +48,8 @@ public class ShopByCategory extends MobileActionMethods{
 	    	boolean blnVerify = false;
 	    	try {
 	    		click(btnKindle);
-	    		//btnKindle.click();
-	    		btnEreader.click();
+	    		click(btnEreader);
+	    		log.info("Successfully Navigated to the Shop by Kindle Items");
 	    		blnVerify = true;
 	    	}
 	    	catch(Exception e) {
@@ -67,11 +67,12 @@ public class ShopByCategory extends MobileActionMethods{
 	    	boolean blnVerify = false;
 	    	try {
 	    		Assert.assertNotEquals(driver.findElements(By.xpath("//android.view.View[contains(@text, 'Display')]")).size(), 0, "The Kindle Items are not present in the List");
+	    		log.info("Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful");
 	    		blnVerify = true;
 	    	}
 	    	catch(Exception e) {
 	    		e.printStackTrace();
-	    		
+	    		log.error("Failed to verify the Kindle Items on the Amazon App and the Test Fails");
 	    	}
 	    	return blnVerify;
 	    }
