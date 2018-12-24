@@ -43,3 +43,16 @@
 2018-12-24 11:06:25,454 INFO  [Log] Successfully Navigated to the Shop by Kindle Items 
 2018-12-24 11:06:28,706 INFO  [Log] Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful 
 2018-12-24 11:06:30,880 INFO  [Log] Successfully closed the App  
+2018-12-24 12:05:22,892 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) 
+2018-12-24 12:05:27,411 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) Has been clicked successfully 
+2018-12-24 12:05:27,411 INFO  [Log] Successfully clicked on the Skip Sign in Button 
+2018-12-24 12:05:28,709 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) 
+2018-12-24 12:05:36,441 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) Has been clicked successfully 
+2018-12-24 12:05:36,441 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) 
+2018-12-24 12:05:39,855 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) Has been clicked successfully 
+2018-12-24 12:05:39,856 INFO  [Log] Successfully navigated to the Shop by Category screen 
+2018-12-24 12:05:39,856 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) 
+2018-12-24 12:05:44,932 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) Has been clicked successfully 
+2018-12-24 12:05:44,933 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) 
+2018-12-24 12:08:26,045 ERROR [Log] No such Element Exception 
+2018-12-24 12:08:26,046 INFO  [Log] Successfully Navigated to the Shop by Kindle Items 

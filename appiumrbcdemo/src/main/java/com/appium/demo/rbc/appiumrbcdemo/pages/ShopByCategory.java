@@ -4,6 +4,7 @@
 package com.appium.demo.rbc.appiumrbcdemo.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -42,18 +43,18 @@ public class ShopByCategory extends MobileActionMethods{
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers & eBooks']")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 
-	    private AndroidElement btnKindle;
+	    private MobileElement btnKindle;
 	    
 	   
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers']")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 
-	    private AndroidElement btnEreader;
+	    private MobileElement btnEreader;
 	    
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Results in Kindle E-readers']")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 
-	    private AndroidElement labelResults;
+	    private MobileElement labelResults;
 	    
 	    @AndroidFindBy(xpath = "//android.view.View[contains(@text, 'Display')]")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
@@ -62,7 +63,7 @@ public class ShopByCategory extends MobileActionMethods{
 	    
 	    
 	    
-	    public ShopByCategory navigateToShopByKindle() {
+	    public boolean navigateToShopByKindle() {
 	    	
 	    	boolean blnVerify = false;
 	    	try {
@@ -77,17 +78,17 @@ public class ShopByCategory extends MobileActionMethods{
 
 	    		
 	    	}
-	    	return this;
+	    	return blnVerify;
 	    }
 	    
 	    
 	    
 	
-	    public ShopByCategory verifyKindleItems() {
+	    public boolean verifyKindleItems() {
 	    	
 	    	boolean blnVerify = false;
 	    	try {
-	    		assersion.assertNotEquals(driver.findElements(By.xpath("//android.view.View[contains(@text, 'Display')]")).size(), 0, "The Kindle Items are not present in the List");
+	    		assersion.assertNotEquals(driver.findElements(By.xpath("//android.view.View[contains(@text, 'Display')]")).size(), 0, "The Kindle Items are not present in the List and the Test Fails");
 	    		log.info("Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful");
 	    		closeApp();
 	    		blnVerify = true;
@@ -97,7 +98,7 @@ public class ShopByCategory extends MobileActionMethods{
 	    		assersion.takeScreenShot();
 	    		log.error("Failed to verify the Kindle Items on the Amazon App and the Test Fails");
 	    	}
-	    	return this;
+	    	return blnVerify;
 	    }
  
 	   

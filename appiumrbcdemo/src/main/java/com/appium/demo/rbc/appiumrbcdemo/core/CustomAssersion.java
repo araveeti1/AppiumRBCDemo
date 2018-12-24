@@ -35,6 +35,8 @@ public class CustomAssersion extends Assertion{
 		System.out.println("The Expected Messsage is:"+a.getExpected());
 		}
 
+		
+		//On Assert Failure it will take the screen shot
 		@Override
 		public void onAssertFailure(IAssert assertCommand) {
 			System.out.println("The Expected Messsage is:"+assertCommand.getExpected()+" anf the Actual Message is +" +assertCommand.getActual());			

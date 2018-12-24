@@ -4,6 +4,7 @@
 package com.appium.demo.rbc.appiumrbcdemo.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -33,11 +34,11 @@ public class HomePage extends MobileActionMethods{
 	    
 	    @AndroidFindBy(id = "in.amazon.mShop.android.shopping:id/action_bar_burger_icon")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
-	    private AndroidElement btnHamburger;
+	    private MobileElement btnHamburger;
 	    
 	    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Shop by Category']")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
-	    private AndroidElement btnShopBy;
+	    private MobileElement btnShopBy;
 	    
 	   
 	    
