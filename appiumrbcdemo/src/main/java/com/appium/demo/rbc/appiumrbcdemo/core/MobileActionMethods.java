@@ -2,7 +2,7 @@
  * 
  */
 
-package com.appium.demo.rbc.appiumrbcdemo.pages;
+package com.appium.demo.rbc.appiumrbcdemo.core;
 import java.io.IOException;
 
 import java.util.HashMap;

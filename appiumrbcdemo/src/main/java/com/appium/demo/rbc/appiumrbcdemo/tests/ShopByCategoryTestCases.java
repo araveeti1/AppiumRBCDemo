@@ -36,7 +36,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.appium.demo.rbc.appiumrbcdemo.pages.CustomAssersion;
+import com.appium.demo.rbc.appiumrbcdemo.core.CustomAssersion;
 import com.appium.demo.rbc.appiumrbcdemo.pages.HomePage;
 import com.appium.demo.rbc.appiumrbcdemo.pages.ShopByCategory;
 import com.appium.demo.rbc.appiumrbcdemo.pages.SignUpPage;

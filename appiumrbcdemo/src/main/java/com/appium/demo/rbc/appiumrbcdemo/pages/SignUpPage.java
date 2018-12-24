@@ -5,6 +5,9 @@ package com.appium.demo.rbc.appiumrbcdemo.pages;
 
 import org.openqa.selenium.support.PageFactory;
 
+import com.appium.demo.rbc.appiumrbcdemo.core.CustomAssersion;
+import com.appium.demo.rbc.appiumrbcdemo.core.MobileActionMethods;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -27,12 +30,11 @@ public class SignUpPage extends MobileActionMethods{
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	         assersion = new CustomAssersion(driver);
-
 	    }
 	  
 	 
-	 @AndroidFindBy(id = "in.amazon.mShop.android.shopping:id/skip_sign_in_button")
-		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
+	@AndroidFindBy(id = "in.amazon.mShop.android.shopping:id/skip_sign_in_button")
+	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 
 	    private AndroidElement btnSkipSignin;
 	 

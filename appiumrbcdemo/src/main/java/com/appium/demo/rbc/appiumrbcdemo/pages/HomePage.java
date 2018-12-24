@@ -14,6 +14,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.appium.demo.rbc.appiumrbcdemo.core.MobileActionMethods;
+
 public class HomePage extends MobileActionMethods{
 	
 	//Creating the Generic Driver Instance.
@@ -31,12 +33,10 @@ public class HomePage extends MobileActionMethods{
 	    
 	    @AndroidFindBy(id = "in.amazon.mShop.android.shopping:id/action_bar_burger_icon")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
-
 	    private AndroidElement btnHamburger;
 	    
 	    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Shop by Category']")
 		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
-
 	    private AndroidElement btnShopBy;
 	    
 	   

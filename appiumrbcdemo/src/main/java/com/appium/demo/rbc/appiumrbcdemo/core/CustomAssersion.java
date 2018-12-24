@@ -1,4 +1,4 @@
-package com.appium.demo.rbc.appiumrbcdemo.pages;
+package com.appium.demo.rbc.appiumrbcdemo.core;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +14,8 @@ import org.testng.asserts.IAssert;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+
+//Designing the CustomAssersion by extending the Assersion for readability
 
 public class CustomAssersion extends Assertion{
 	
@@ -57,8 +59,6 @@ public class CustomAssersion extends Assertion{
 			  } catch (IOException e) {
 			   e.printStackTrace();
 			  }
-			 }
-
-	
+		}
 
 }

@@ -17,6 +17,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.appium.demo.rbc.appiumrbcdemo.core.CustomAssersion;
+import com.appium.demo.rbc.appiumrbcdemo.core.MobileActionMethods;
+
 public class ShopByCategory extends MobileActionMethods{
 	
 	 private AppiumDriver<?> driver;
