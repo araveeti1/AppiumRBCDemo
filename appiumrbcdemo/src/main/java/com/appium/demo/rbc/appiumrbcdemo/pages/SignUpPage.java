@@ -13,9 +13,14 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class SignUpPage extends MobileActionMethods{
 	
-	 private AppiumDriver<AndroidElement> driver;
+	//Creating the Generic Driver Instance.
 
-	 public SignUpPage(AndroidDriver<AndroidElement> driver) {
+	
+	 private AppiumDriver<?> driver;
+	 
+	 
+
+	 public SignUpPage(AppiumDriver<?> driver) {
 	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);

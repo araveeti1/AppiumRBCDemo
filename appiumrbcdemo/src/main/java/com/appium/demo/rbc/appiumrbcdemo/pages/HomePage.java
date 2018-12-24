@@ -14,12 +14,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends MobileActionMethods{
 	
-	 private AppiumDriver<AndroidElement> driver;
+	//Creating the Generic Driver Instance.
+	
+	 private AppiumDriver<?> driver;
 	 
 	    
 	    //Initilize the Elements using Page Factory
 	    
-	    public HomePage(AndroidDriver<AndroidElement> driver) {
+	    public HomePage(AppiumDriver<?> driver) {
 	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);

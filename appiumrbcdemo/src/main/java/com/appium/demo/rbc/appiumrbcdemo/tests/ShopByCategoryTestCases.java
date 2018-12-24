@@ -3,11 +3,15 @@
  */
 package com.appium.demo.rbc.appiumrbcdemo.tests;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -18,6 +22,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.TestRunner;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -26,11 +31,17 @@ import com.appium.demo.rbc.appiumrbcdemo.pages.HomePage;
 import com.appium.demo.rbc.appiumrbcdemo.pages.ShopByCategory;
 import com.appium.demo.rbc.appiumrbcdemo.pages.SignUpPage;
 
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
+
 public class ShopByCategoryTestCases {
 	
-	private static AndroidDriver driver;
+	private static AppiumDriver driver;
 	
 	public static String outPutDirectory = null;
+	
+	// ATUTestRecorder recorder;
+
 	
 	@BeforeTest
 	public void setup(ITestContext ctx) {
@@ -41,6 +52,11 @@ public class ShopByCategoryTestCases {
 	    TestRunner runner = (TestRunner) ctx;
 	    System.out.println("The output Directory is Given By ::" +outPutDirectory);
 	    runner.setOutputDirectory(outPutDirectory);
+	    //DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
+	    //Date date1 = new Date();
+	    // Created object of ATUTestRecorder.
+	    // Provide path to store videos and file name format.
+	    
 	}
 
 	
@@ -66,6 +82,8 @@ public class ShopByCategoryTestCases {
 			e.printStackTrace();
 		}
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+		  
+
 	}
 	
 	@Test
@@ -82,6 +100,14 @@ public class ShopByCategoryTestCases {
 		
 	}
 
-	
+	@AfterTest
+	 public void End() throws IOException, ATUTestRecorderException {
+	  driver.quit();
+	  // Stop appium server when test Is ended.
+	  
+	  // Stop video recording.
+	//  recorder.stop();
+	 }
+
 
 }

@@ -28,13 +28,16 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class MobileActionMethods {
-	 private AppiumDriver<AndroidElement> driver;
+	
+	//Creating the Generic Driver Instance.
+
+	 private AppiumDriver<?> driver;
 	 
 	 protected static Logger log = Logger.getLogger(Log.class.getName());
 	 
 
 	
-	 public MobileActionMethods(AndroidDriver<AndroidElement> driver) {
+	 public MobileActionMethods(AppiumDriver<?> driver) {
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    }

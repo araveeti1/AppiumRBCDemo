@@ -17,12 +17,15 @@ import org.testng.Assert;
 
 public class ShopByCategory extends MobileActionMethods{
 	
-	 private AppiumDriver<AndroidElement> driver;
+	 private AppiumDriver<?> driver;
 	 
 	    
 	    //Initilize the Elements using Page Factory
+	 
+		//Creating the Generic Driver Instance.
+
 	    
-	    public ShopByCategory(AndroidDriver<AndroidElement> driver) {
+	    public ShopByCategory(AppiumDriver<?> driver) {
 	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -68,6 +71,7 @@ public class ShopByCategory extends MobileActionMethods{
 	    	try {
 	    		Assert.assertNotEquals(driver.findElements(By.xpath("//android.view.View[contains(@text, 'Display')]")).size(), 0, "The Kindle Items are not present in the List");
 	    		log.info("Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful");
+	    		closeApp();
 	    		blnVerify = true;
 	    	}
 	    	catch(Exception e) {
