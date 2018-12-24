@@ -56,3 +56,16 @@
 2018-12-24 12:05:44,933 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) 
 2018-12-24 12:08:26,045 ERROR [Log] No such Element Exception 
 2018-12-24 12:08:26,046 INFO  [Log] Successfully Navigated to the Shop by Kindle Items 
+2018-12-24 12:45:23,443 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) 
+2018-12-24 12:45:30,586 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) Has been clicked successfully 
+2018-12-24 12:45:30,586 INFO  [Log] Successfully clicked on the Skip Sign in Button 
+2018-12-24 12:45:31,217 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) 
+2018-12-24 12:45:52,693 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) Has been clicked successfully 
+2018-12-24 12:45:52,694 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) 
+2018-12-24 12:45:55,804 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) Has been clicked successfully 
+2018-12-24 12:45:55,804 INFO  [Log] Successfully navigated to the Shop by Category screen 
+2018-12-24 12:45:55,804 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) 
+2018-12-24 12:45:58,783 ERROR [Log] An Exception is thrown at run time  
+2018-12-24 12:45:58,783 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) 
+2018-12-24 12:45:58,795 ERROR [Log] An Exception is thrown at run time  
+2018-12-24 12:45:58,795 INFO  [Log] Successfully Navigated to the Shop by Kindle Items 

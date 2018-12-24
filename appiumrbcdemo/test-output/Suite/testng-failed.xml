@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="3" name="iPhone7 Plus(failed)" parallel="tests">
+    <parameter name="platformVersion" value=""/>
+    <parameter name="udid" value=" "/>
+    <parameter name="platform" value="ios"/>
+    <classes>
+      <class name="com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases">
+        <methods>
+          <include name="End"/>
+          <include name="verifyKindleItems"/>
+          <include name="setup"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases -->
+    </classes>
+  </test> <!-- iPhone7 Plus(failed) -->
+  <test thread-count="3" name="Android Execution(failed)" parallel="tests">
     <parameter name="platformVersion" value="7.1.1"/>
-    <parameter name="udid" value="c75c06ff"/>
+    <parameter name="udid" value=""/>
     <parameter name="platform" value="android"/>
     <classes>
       <class name="com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases">
@@ -15,5 +30,20 @@
         </methods>
       </class> <!-- com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Android Execution(failed) -->
+  <test thread-count="3" name="Android Real Device(failed)" parallel="tests">
+    <parameter name="platformVersion" value="7.1.1"/>
+    <parameter name="udid" value=""/>
+    <parameter name="platform" value="android"/>
+    <classes>
+      <class name="com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases">
+        <methods>
+          <include name="End"/>
+          <include name="verifyKindleItems"/>
+          <include name="setup"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases -->
+    </classes>
+  </test> <!-- Android Real Device(failed) -->
 </suite> <!-- Failed suite [Suite] -->

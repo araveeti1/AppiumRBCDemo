@@ -68,12 +68,10 @@ public class RBCTestBase {
         switch (platform.toLowerCase()) {
         
             case "ios":
-                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
+                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7");
                 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
-
-                // if iOS 9+ use XCUITest
-                    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-                 capabilities.setCapability(MobileCapabilityType.APP, new File("Pathto the ipa file").getAbsolutePath());
+                capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+                capabilities.setCapability(MobileCapabilityType.APP, new File("Path to the ipa file").getAbsolutePath());
 
                 driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
