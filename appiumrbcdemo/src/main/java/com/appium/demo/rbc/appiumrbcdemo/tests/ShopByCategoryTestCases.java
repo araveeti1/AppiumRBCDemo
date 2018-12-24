@@ -4,7 +4,14 @@
 package com.appium.demo.rbc.appiumrbcdemo.tests;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.remote.MobilePlatform;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -24,7 +31,9 @@ import org.testng.ITestContext;
 import org.testng.TestRunner;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.appium.demo.rbc.appiumrbcdemo.pages.HomePage;
@@ -43,7 +52,7 @@ public class ShopByCategoryTestCases {
 	// ATUTestRecorder recorder;
 
 	
-	@BeforeTest
+	@BeforeSuite
 	public void setup(ITestContext ctx) {
 		DOMConfigurator.configure("log4j.xml");
 		String baseDir = System.getProperty("user.dir");
@@ -52,39 +61,53 @@ public class ShopByCategoryTestCases {
 	    TestRunner runner = (TestRunner) ctx;
 	    System.out.println("The output Directory is Given By ::" +outPutDirectory);
 	    runner.setOutputDirectory(outPutDirectory);
-	    //DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
-	    //Date date1 = new Date();
-	    // Created object of ATUTestRecorder.
-	    // Provide path to store videos and file name format.
-	    
 	}
+
+	@BeforeTest(alwaysRun = true)
+    @Parameters( { "platform", "udid", "platformVersion"})
+	public void beforeTest(String platform, String udid, String platformVersion) throws Exception {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        capabilities.setCapability(MobileCapabilityType.UDID, udid);
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion);
+
+
+        switch (platform.toLowerCase()) {
+        
+            case "ios":
+                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Simulator");
+                capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
+
+                // if iOS 9+ use XCUITest
+                    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+                 capabilities.setCapability(MobileCapabilityType.APP, new File("Pathto the ipa file").getAbsolutePath());
+
+                driver = new IOSDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+
+                break;
+
+            case "android":
+                capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Galaxy");
+                capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
+                File classpathRoot = new File(System.getProperty("user.dir"));
+        		File appDir = new File(classpathRoot, "/Apps/Amazon/");
+        		File app = new File(appDir, "Amazon India Online Shopping and Payments_v16.21.0.300_apkpure.com.apk");
+        		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+                capabilities.setCapability("appPackage", "in.amazon.mShop.android.shopping");
+                capabilities.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
+
+                driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+
+                break;
+
+            default:
+                throw new Exception("unknown platform name is Given and the test Fails.Please check the platform name in the testng.xml file for the same.");
+        }
+    }
 
 	
-	@BeforeClass
-	public void init() {
-		//DOMConfigurator.configure("log4j.xml");
-		File classpathRoot = new File(System.getProperty("user.dir"));
-		File appDir = new File(classpathRoot, "/Apps/Amazon/");
-		File app = new File(appDir, "Amazon India Online Shopping and Payments_v16.21.0.300_apkpure.com.apk");
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-		capabilities.setCapability("deviceName", "Galaxy");
-		capabilities.setCapability("platformVersion", "7.1.1");
-		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("app", app.getAbsolutePath());
-		capabilities.setCapability("appPackage", "in.amazon.mShop.android.shopping");
-		capabilities.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
-
-		try {
-			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-		  
-
-	}
 	
 	@Test
 	public void verifyKindleItems() {

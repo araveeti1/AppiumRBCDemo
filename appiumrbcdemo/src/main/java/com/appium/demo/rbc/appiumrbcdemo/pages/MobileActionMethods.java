@@ -129,6 +129,7 @@ public class MobileActionMethods {
 		boolean isVerify = false;
 		try {
 			((AppiumDriver) driver).closeApp();
+			log.info("Successfully closed the App ");
 			isVerify = true;
 		} catch (IllegalArgumentException e) {
 			throw e;

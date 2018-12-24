@@ -2,31 +2,48 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="50206" started-at="2018-12-24T01:52:19Z" finished-at="2018-12-24T01:53:09Z">
+  <suite name="Suite" duration-ms="50306" started-at="2018-12-24T02:19:40Z" finished-at="2018-12-24T02:20:31Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="50206" started-at="2018-12-24T01:52:19Z" finished-at="2018-12-24T01:53:09Z">
+    <test name="Test" duration-ms="50306" started-at="2018-12-24T02:19:40Z" finished-at="2018-12-24T02:20:31Z">
       <class name="com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@159f197]" name="setup" is-config="true" duration-ms="73" started-at="2018-12-24T01:52:19Z" finished-at="2018-12-24T01:52:19Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@5ccddd20]" name="setup" is-config="true" duration-ms="88" started-at="2018-12-24T02:19:40Z" finished-at="2018-12-24T02:19:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2dbf4cbd]]>
+                <![CDATA[org.testng.TestRunner@63192798]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@159f197]" name="init" is-config="true" duration-ms="16410" started-at="2018-12-24T01:52:19Z" finished-at="2018-12-24T01:52:36Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@5ccddd20]" name="beforeTest" is-config="true" duration-ms="17765" started-at="2018-12-24T02:19:40Z" finished-at="2018-12-24T02:19:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[c75c06ff]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7.1.1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="verifyKindleItems()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@159f197]" name="verifyKindleItems" duration-ms="27711" started-at="2018-12-24T01:52:36Z" finished-at="2018-12-24T01:53:03Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="verifyKindleItems()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@5ccddd20]" name="verifyKindleItems" duration-ms="26634" started-at="2018-12-24T02:19:58Z" finished-at="2018-12-24T02:20:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyKindleItems -->
-        <test-method status="PASS" signature="End()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@159f197]" name="End" is-config="true" duration-ms="5878" started-at="2018-12-24T01:53:03Z" finished-at="2018-12-24T01:53:09Z">
+        <test-method status="PASS" signature="End()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@5ccddd20]" name="End" is-config="true" duration-ms="5758" started-at="2018-12-24T02:20:25Z" finished-at="2018-12-24T02:20:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- End -->

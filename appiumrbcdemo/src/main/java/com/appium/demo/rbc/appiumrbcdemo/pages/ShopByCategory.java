@@ -8,6 +8,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
@@ -32,16 +33,24 @@ public class ShopByCategory extends MobileActionMethods{
 	    }
 	    
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers & eBooks']")
+		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
+
 	    private AndroidElement btnKindle;
 	    
 	   
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers']")
+		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
+
 	    private AndroidElement btnEreader;
 	    
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Results in Kindle E-readers']")
+		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
+
 	    private AndroidElement labelResults;
 	    
 	    @AndroidFindBy(xpath = "//android.view.View[contains(@text, 'Display')]")
+		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
+
 	    private String itemsKindle;
 	    
 	    

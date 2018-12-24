@@ -143,6 +143,9 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;platformVersion&quot; value=&quot;7.1.1&quot;/&gt;
+    &lt;parameter name=&quot;udid&quot; value=&quot;c75c06ff&quot;/&gt;
+    &lt;parameter name=&quot;platform&quot; value=&quot;android&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases&quot;/&gt;
     &lt;/classes&gt;
@@ -188,12 +191,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyKindleItems')
 data.setCell(0, 2, 'com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases')
-data.setCell(0, 3, 27711);
+data.setCell(0, 3, 26634);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -220,21 +223,21 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup(org.testng.TestRunner@2dbf4cbd)</span>
+              <div class="configuration-suite before">
+                <span class="method-name">setup(org.testng.TestRunner@63192798)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest(android, c75c06ff, 7.1.1)</span>
+                <span class="method-start">96 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">83 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyKindleItems</span>
-                <span class="method-start">16499 ms</span>
+                <span class="method-start">17874 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">End</span>
-                <span class="method-start">44317 ms</span>
+                <span class="method-start">44639 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

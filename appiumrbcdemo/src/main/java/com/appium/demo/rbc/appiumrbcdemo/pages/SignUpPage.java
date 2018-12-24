@@ -10,6 +10,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class SignUpPage extends MobileActionMethods{
 	
@@ -28,6 +29,8 @@ public class SignUpPage extends MobileActionMethods{
 	  
 	 
 	 @AndroidFindBy(id = "in.amazon.mShop.android.shopping:id/skip_sign_in_button")
+		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
+
 	    private AndroidElement btnSkipSignin;
 	 
 	 
