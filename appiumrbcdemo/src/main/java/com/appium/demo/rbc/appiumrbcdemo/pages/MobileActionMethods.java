@@ -34,12 +34,13 @@ public class MobileActionMethods {
 	 private AppiumDriver<?> driver;
 	 
 	 protected static Logger log = Logger.getLogger(Log.class.getName());
-	 
+	 public CustomAssersion assersion;
 
 	
 	 public MobileActionMethods(AppiumDriver<?> driver) {
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	         assersion = new CustomAssersion(driver);
 	    }
 
 	private static final TimeUnit SECONDS = null;

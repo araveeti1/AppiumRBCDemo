@@ -36,6 +36,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.appium.demo.rbc.appiumrbcdemo.pages.CustomAssersion;
 import com.appium.demo.rbc.appiumrbcdemo.pages.HomePage;
 import com.appium.demo.rbc.appiumrbcdemo.pages.ShopByCategory;
 import com.appium.demo.rbc.appiumrbcdemo.pages.SignUpPage;
@@ -49,12 +50,15 @@ public class ShopByCategoryTestCases {
 	
 	public static String outPutDirectory = null;
 	
+	public CustomAssersion assersion;
+	
 	// ATUTestRecorder recorder;
 
 	
 	@BeforeSuite
 	public void setup(ITestContext ctx) {
 		DOMConfigurator.configure("log4j.xml");
+		
 		String baseDir = System.getProperty("user.dir");
 		 Date date= new Date();
 		 outPutDirectory = baseDir+File.separator+"testresults"+File.separator+ new Timestamp(date.getTime());
@@ -99,6 +103,7 @@ public class ShopByCategoryTestCases {
 
                 driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+        		assersion = new CustomAssersion(driver);
 
                 break;
 

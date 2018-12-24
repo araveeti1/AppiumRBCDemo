@@ -13,3 +13,33 @@
 2018-12-23 21:20:20,359 INFO  [Log] Successfully Navigated to the Shop by Kindle Items 
 2018-12-23 21:20:23,175 INFO  [Log] Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful 
 2018-12-23 21:20:25,202 INFO  [Log] Successfully closed the App  
+2018-12-24 11:03:55,594 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) 
+2018-12-24 11:04:00,175 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) Has been clicked successfully 
+2018-12-24 11:04:00,176 INFO  [Log] Successfully clicked on the Skip Sign in Button 
+2018-12-24 11:04:00,176 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) 
+2018-12-24 11:04:07,377 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) Has been clicked successfully 
+2018-12-24 11:04:07,378 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) 
+2018-12-24 11:04:10,513 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) Has been clicked successfully 
+2018-12-24 11:04:10,513 INFO  [Log] Successfully navigated to the Shop by Category screen 
+2018-12-24 11:04:10,514 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) 
+2018-12-24 11:04:15,620 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) Has been clicked successfully 
+2018-12-24 11:04:15,621 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) 
+2018-12-24 11:04:17,909 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) Has been clicked successfully 
+2018-12-24 11:04:17,909 INFO  [Log] Successfully Navigated to the Shop by Kindle Items 
+2018-12-24 11:04:21,311 INFO  [Log] Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful 
+2018-12-24 11:04:23,558 INFO  [Log] Successfully closed the App  
+2018-12-24 11:06:05,318 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) 
+2018-12-24 11:06:08,892 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) Has been clicked successfully 
+2018-12-24 11:06:08,892 INFO  [Log] Successfully clicked on the Skip Sign in Button 
+2018-12-24 11:06:09,737 INFO  [Log] Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) 
+2018-12-24 11:06:14,784 INFO  [Log] The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) Has been clicked successfully 
+2018-12-24 11:06:14,785 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) 
+2018-12-24 11:06:17,921 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) Has been clicked successfully 
+2018-12-24 11:06:17,921 INFO  [Log] Successfully navigated to the Shop by Category screen 
+2018-12-24 11:06:17,921 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) 
+2018-12-24 11:06:23,165 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) Has been clicked successfully 
+2018-12-24 11:06:23,167 INFO  [Log] Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) 
+2018-12-24 11:06:25,454 INFO  [Log] The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) Has been clicked successfully 
+2018-12-24 11:06:25,454 INFO  [Log] Successfully Navigated to the Shop by Kindle Items 
+2018-12-24 11:06:28,706 INFO  [Log] Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful 
+2018-12-24 11:06:30,880 INFO  [Log] Successfully closed the App  

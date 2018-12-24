@@ -18,6 +18,7 @@ public class SignUpPage extends MobileActionMethods{
 
 	
 	 private AppiumDriver<?> driver;
+	 public CustomAssersion assersion;
 	 
 	 
 
@@ -25,6 +26,8 @@ public class SignUpPage extends MobileActionMethods{
 	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	         assersion = new CustomAssersion(driver);
+
 	    }
 	  
 	 
@@ -39,11 +42,15 @@ public class SignUpPage extends MobileActionMethods{
 		 try {
 			 click(btnSkipSignin);
 			 log.info("Successfully clicked on the Skip Sign in Button");
+		    assersion.takeScreenShot();
+
 			 blnVerify = true;
 		 }
 		 catch(Exception e) {
 			 e.printStackTrace();
 			 log.error("Failed to click the Skip Sign in button");
+	    	assersion.takeScreenShot();
+
 		 }
 		 return blnVerify;
 	  }

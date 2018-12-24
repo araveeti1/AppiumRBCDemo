@@ -11,6 +11,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,6 +20,7 @@ import org.testng.Assert;
 public class ShopByCategory extends MobileActionMethods{
 	
 	 private AppiumDriver<?> driver;
+	 public  CustomAssersion assersion;
 	 
 	    
 	    //Initilize the Elements using Page Factory
@@ -30,6 +32,8 @@ public class ShopByCategory extends MobileActionMethods{
 	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	         assersion = new CustomAssersion(driver);
+
 	    }
 	    
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers & eBooks']")
@@ -55,7 +59,7 @@ public class ShopByCategory extends MobileActionMethods{
 	    
 	    
 	    
-	    public boolean navigateToShopByKindle() {
+	    public ShopByCategory navigateToShopByKindle() {
 	    	
 	    	boolean blnVerify = false;
 	    	try {
@@ -66,28 +70,31 @@ public class ShopByCategory extends MobileActionMethods{
 	    	}
 	    	catch(Exception e) {
 	    		e.printStackTrace();
+	    		assersion.takeScreenShot();
+
 	    		
 	    	}
-	    	return blnVerify;
+	    	return this;
 	    }
 	    
 	    
 	    
 	
-	    public boolean verifyKindleItems() {
+	    public ShopByCategory verifyKindleItems() {
 	    	
 	    	boolean blnVerify = false;
 	    	try {
-	    		Assert.assertNotEquals(driver.findElements(By.xpath("//android.view.View[contains(@text, 'Display')]")).size(), 0, "The Kindle Items are not present in the List");
+	    		assersion.assertNotEquals(driver.findElements(By.xpath("//android.view.View[contains(@text, 'Display')]")).size(), 0, "The Kindle Items are not present in the List");
 	    		log.info("Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful");
 	    		closeApp();
 	    		blnVerify = true;
 	    	}
 	    	catch(Exception e) {
 	    		e.printStackTrace();
+	    		assersion.takeScreenShot();
 	    		log.error("Failed to verify the Kindle Items on the Amazon App and the Test Fails");
 	    	}
-	    	return blnVerify;
+	    	return this;
 	    }
  
 	   

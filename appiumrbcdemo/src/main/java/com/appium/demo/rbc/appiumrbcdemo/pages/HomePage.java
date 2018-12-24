@@ -53,6 +53,8 @@ public class HomePage extends MobileActionMethods{
 	    	catch(Exception e) {
 	    		e.printStackTrace();
 	    		log.error("Failed to navigate to the Shop by Category Screen");
+	    		assersion.takeScreenShot();
+
 	    		
 	    	}
 	    	return blnVerify;
