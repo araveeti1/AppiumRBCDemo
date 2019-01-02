@@ -5,14 +5,12 @@
 package com.appium.demo.rbc.appiumrbcdemo.core;
 import java.io.IOException;
 
-import java.util.HashMap;
 
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.PageFactory;
@@ -22,22 +20,20 @@ import io.appium.java_client.AppiumDriver;
 
 import io.appium.java_client.MobileElement;
 
-import io.appium.java_client.android.AndroidDriver;
 
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class MobileActionMethods {
 	
 	//Creating the Generic Driver Instance.
 
-	 private AppiumDriver<?> driver;
+	 private AppiumDriver<MobileElement> driver;
 	 
-	 protected static Logger log = Logger.getLogger(Log.class.getName());
+	 public static Logger log = Logger.getLogger(Log.class.getName());
 	 public CustomAssersion assersion;
 
 	
-	 public MobileActionMethods(AppiumDriver<?> driver) {
+	 public MobileActionMethods(AppiumDriver<MobileElement> driver) {
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	         assersion = new CustomAssersion(driver);
@@ -86,12 +82,12 @@ public class MobileActionMethods {
 		} catch (IllegalArgumentException e) {
 			log.error("An Exception is thrown at run time ");
 
-			throw e;
 		} catch (TimeoutException e) {
-			throw e;
+			log.error("Time out Exception is thrown at run time ");
+
+			
 		} catch (Exception e) {
 			try {
-				throw e;
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -112,10 +108,10 @@ public class MobileActionMethods {
 			int[] returnVal = { x, y };
 			return returnVal;
 		} catch (IllegalArgumentException e) {
-			throw e;
+			log.error("Exception is thrown at run time and the test Fails");
+			
 		} catch (Exception e) {
 			try {
-				throw e;
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -133,14 +129,17 @@ public class MobileActionMethods {
 			log.info("Successfully closed the App ");
 			isVerify = true;
 		} catch (IllegalArgumentException e) {
-			throw e;
+			
 		} catch (Exception e) {
+			log.error("Exception is thrown at run time and the test Fails");
+
 			
 			try {
-				throw e;
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
+				log.error("Exception is thrown at run time and the test Fails");
+
 			}
 		}
 		return isVerify;
@@ -151,27 +150,8 @@ public class MobileActionMethods {
 	
 	//Getting the Page Source
 	
-public void getPageSource() throws InterruptedException {
-	System.out.println(driver.getPageSource());
-	
-}
-
-//Swipe using Java Script Executor
-
-public void swipeJavaScript(MobileElement mobile) {
-	JavascriptExecutor js= (JavascriptExecutor)driver;
-	HashMap<String, String> swipeObject=new HashMap<String, String>();
-	Dimension size;
-	size = ((AppiumDriver) driver).manage().window().getSize();
-	int starty = (int) (size.height * 0.80); 
-	int endy = (int) (size.height * 0.20);
-	int startx = size.width / 2;
-	int endx=0;
-	swipeObject.put("startX", String.valueOf(startx));
-	swipeObject.put("startY", String.valueOf(starty));
-	swipeObject.put("endX", String.valueOf(starty));
-	swipeObject.put("endY", String.valueOf(endy));
-	js.executeScript("mobile: scroll", swipeObject);
+public String getPageSource() throws InterruptedException {
+	return driver.getPageSource();
 	
 }
 
@@ -184,7 +164,7 @@ public boolean waitForElementClickable(MobileElement objElement) {
 	isVerify = true;
 	}
 	catch(Exception e) {
-		
+		log.error("Exception is thrown at run time and the test Fails");
 		isVerify = false;
 	}
 	return isVerify;

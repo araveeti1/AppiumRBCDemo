@@ -21,23 +21,21 @@ public class HomePage extends MobileActionMethods{
 	
 	//Creating the Generic Driver Instance.
 	
-	 private AppiumDriver<?> driver;
+	 private AppiumDriver<MobileElement> driver;
 	 
 	    
 	    //Initilize the Elements using Page Factory
 	    
-	    public HomePage(AppiumDriver<?> driver) {
+	    public HomePage(AppiumDriver<MobileElement> driver) {
 	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    }
 	    
 	    @AndroidFindBy(id = "in.amazon.mShop.android.shopping:id/action_bar_burger_icon")
-		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 	    private MobileElement btnHamburger;
 	    
 	    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Shop by Category']")
-		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 	    private MobileElement btnShopBy;
 	    
 	   

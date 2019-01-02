@@ -23,7 +23,7 @@ import com.appium.demo.rbc.appiumrbcdemo.core.MobileActionMethods;
 
 public class ShopByCategory extends MobileActionMethods{
 	
-	 private AppiumDriver<?> driver;
+	 private AppiumDriver<MobileElement> driver;
 	 public  CustomAssersion assersion;
 	 
 	    
@@ -32,7 +32,7 @@ public class ShopByCategory extends MobileActionMethods{
 		//Creating the Generic Driver Instance.
 
 	    
-	    public ShopByCategory(AppiumDriver<?> driver) {
+	    public ShopByCategory(AppiumDriver<MobileElement> driver) {
 	    	super(driver);
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -41,25 +41,18 @@ public class ShopByCategory extends MobileActionMethods{
 	    }
 	    
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers & eBooks']")
-		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 
 	    private MobileElement btnKindle;
-	    
-	   
+	    	   
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers']")
-		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 
 	    private MobileElement btnEreader;
 	    
-	    @AndroidFindBy(xpath = "//android.view.View[@text='Results in Kindle E-readers']")
-		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
-
-	    private MobileElement labelResults;
+	    //@AndroidFindBy(xpath = "//android.view.View[@text='Results in Kindle E-readers']")
+	  //  private MobileElement labelResults;	    
 	    
-	    @AndroidFindBy(xpath = "//android.view.View[contains(@text, 'Display')]")
-		@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
-
-	    private String itemsKindle;
+	    //@AndroidFindBy(xpath = "//android.view.View[contains(@text, 'Display')]")
+	    //private String itemsKindle;
 	    
 	    
 	    
@@ -75,6 +68,7 @@ public class ShopByCategory extends MobileActionMethods{
 	    	catch(Exception e) {
 	    		e.printStackTrace();
 	    		assersion.takeScreenShot();
+	    		log.error("Failed to navigate to the Shop by Kindle Items and the Test Fails");
 
 	    		
 	    	}

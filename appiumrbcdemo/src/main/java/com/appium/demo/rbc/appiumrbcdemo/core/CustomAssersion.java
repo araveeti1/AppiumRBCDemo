@@ -6,6 +6,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
@@ -13,18 +14,19 @@ import org.testng.asserts.Assertion;
 import org.testng.asserts.IAssert;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 //Designing the CustomAssersion by extending the Assersion for readability
 
 public class CustomAssersion extends Assertion{
 	
-	 private AppiumDriver<?> driver;
+	 private AppiumDriver<MobileElement> driver;
 	 
 	    
 	    //Initilize the Elements using Page Factory
 	    
-	    public CustomAssersion(AppiumDriver<?> driver) {
+	    public CustomAssersion(AppiumDriver<MobileElement> driver) {
 	        this.driver = driver;
 	        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    }
