@@ -53,12 +53,17 @@ public class MobileActionMethods {
 				isVerify = true;
 		} catch (IllegalArgumentException e) {
 			log.error(" Exception is thrown at run time");
+			throw e;
+
 
 		} catch (NoSuchElementException n) {
 			log.error("No such Element Exception");
+			throw n;
+
 
 		} catch (Exception e) {
 			log.error("An Exception is thrown at run time ");
+			throw e;
 
 
 		}
@@ -81,18 +86,15 @@ public class MobileActionMethods {
 			
 		} catch (IllegalArgumentException e) {
 			log.error("An Exception is thrown at run time ");
+			throw e;
 
-		} catch (TimeoutException e) {
-			log.error("Time out Exception is thrown at run time ");
 
-			
 		} catch (Exception e) {
-			try {
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		}
+			log.error("Time out Exception is thrown at run time ");
+			throw e;
+
+		}	
+		
 		return isVerify;
 	}
 
@@ -107,16 +109,10 @@ public class MobileActionMethods {
 			int y = size.height;
 			int[] returnVal = { x, y };
 			return returnVal;
-		} catch (IllegalArgumentException e) {
-			log.error("Exception is thrown at run time and the test Fails");
-			
 		} catch (Exception e) {
-			try {
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		}
+			log.error("Exception is thrown at run time and the test Fails");		
+
+		} 
 		return null;
 	}
 
@@ -128,20 +124,13 @@ public class MobileActionMethods {
 			((AppiumDriver) driver).closeApp();
 			log.info("Successfully closed the App ");
 			isVerify = true;
-		} catch (IllegalArgumentException e) {
-			
 		} catch (Exception e) {
-			log.error("Exception is thrown at run time and the test Fails");
-
 			
-			try {
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-				log.error("Exception is thrown at run time and the test Fails");
+			log.error("An Exception is thrown at run time");
+			throw e;
 
-			}
 		}
+				
 		return isVerify;
 	}
 
