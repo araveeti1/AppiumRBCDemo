@@ -19,16 +19,11 @@ public class ShopByCategoryTestCases extends RBCTestBase{
 	//Also....We can implement the Data Provider concept to read the Data from various ways like  - Properties files or Json files or Excel and csv files
 	
 	@Test
-	public void verifyKindleItems() {		
-		SignUpPage signup = new SignUpPage(driver);
-		HomePage homePage  = new HomePage(driver);
-		ShopByCategory shopBy = new ShopByCategory(driver);
-		
+	public void verifyKindleItems() {			
 		signup.skipSignin();
 		homePage.navigateToShopByCategory();
 		shopBy.navigateToShopByKindle();
-		shopBy.verifyKindleItems();	
-		
+		shopBy.verifyKindleItems();			
 	}
 
 

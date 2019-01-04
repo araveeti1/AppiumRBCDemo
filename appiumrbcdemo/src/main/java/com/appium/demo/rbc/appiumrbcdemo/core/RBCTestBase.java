@@ -18,6 +18,8 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.SimpleLayout;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
@@ -36,6 +38,9 @@ import com.appium.demo.rbc.appiumrbcdemo.core.CustomAssersion;
 
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import com.appium.demo.rbc.appiumrbcdemo.core.RBCUtils;
+import com.appium.demo.rbc.appiumrbcdemo.pages.HomePage;
+import com.appium.demo.rbc.appiumrbcdemo.pages.ShopByCategory;
+import com.appium.demo.rbc.appiumrbcdemo.pages.SignUpPage;
 
 public class RBCTestBase {
 	
@@ -45,6 +50,9 @@ public class RBCTestBase {
 	
 	public CustomAssersion assersion;
 	public RBCUtils utils;
+	public SignUpPage signup;
+	public HomePage homePage;
+	public ShopByCategory shopBy;
 	
 	// ATUTestRecorder recorder;
 
@@ -54,6 +62,9 @@ public class RBCTestBase {
 	public void setup(ITestContext ctx) {
 		utils = new RBCUtils();
 		DOMConfigurator.configure("log4j.xml");
+		//SimpleLayout layout = new SimpleLayout();           
+		//FileAppender appender = new FileAppender(layout,"your filename",false);
+		//log.addAppender(appender); 
 		
 		String baseDir = System.getProperty("user.dir");
 		 Date date= new Date();
@@ -123,6 +134,13 @@ public class RBCTestBase {
 	
 	@BeforeMethod
     public void setUp(Method m) {
+		
+		//Initializing the Page Objects with driver instance here....
+		
+		 signup = new SignUpPage(driver);
+		 homePage  = new HomePage(driver);
+		 shopBy = new ShopByCategory(driver);
+		
         Test test = m.getAnnotation(Test.class);
         if (test == null) {
             return;

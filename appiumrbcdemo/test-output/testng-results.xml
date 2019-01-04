@@ -2,32 +2,29 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[ is currently running]]>
-    </line>
-    <line>
       <![CDATA[The Method that is going to execute is::verifyKindleItems]]>
     </line>
     <line>
       <![CDATA[The Method ::verifyKindleItemsis Passed Successfully]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="59352" started-at="2019-01-02T23:55:26Z" finished-at="2019-01-02T23:56:25Z">
+  <suite name="Suite" duration-ms="51856" started-at="2019-01-04T02:47:12Z" finished-at="2019-01-04T02:48:04Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="59352" started-at="2019-01-02T23:55:26Z" finished-at="2019-01-02T23:56:25Z">
+    <test name="Test" duration-ms="51856" started-at="2019-01-04T02:47:12Z" finished-at="2019-01-04T02:48:04Z">
       <class name="com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="setup" is-config="true" duration-ms="107" started-at="2019-01-02T23:55:25Z" finished-at="2019-01-02T23:55:26Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="setup" is-config="true" duration-ms="78" started-at="2019-01-04T02:47:12Z" finished-at="2019-01-04T02:47:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4e517165]]>
+                <![CDATA[org.testng.TestRunner@419a20a6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="beforeTest" is-config="true" duration-ms="21539" started-at="2019-01-02T23:55:26Z" finished-at="2019-01-02T23:55:47Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="beforeTest" is-config="true" duration-ms="19157" started-at="2019-01-04T02:47:12Z" finished-at="2019-01-04T02:47:31Z">
           <params>
             <param index="0">
               <value>
@@ -48,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="setUp" is-config="true" duration-ms="1" started-at="2019-01-02T23:55:47Z" finished-at="2019-01-02T23:55:47Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="setUp" is-config="true" duration-ms="224" started-at="2019-01-04T02:47:31Z" finished-at="2019-01-04T02:47:31Z">
           <params>
             <param index="0">
               <value>
@@ -58,18 +55,15 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[ is currently running]]>
-            </line>
-            <line>
               <![CDATA[The Method that is going to execute is::verifyKindleItems]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyKindleItems()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="verifyKindleItems" duration-ms="31860" started-at="2019-01-02T23:55:47Z" finished-at="2019-01-02T23:56:19Z">
+        <test-method status="PASS" signature="verifyKindleItems()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="verifyKindleItems" duration-ms="26395" started-at="2019-01-04T02:47:31Z" finished-at="2019-01-04T02:47:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyKindleItems -->
-        <test-method status="PASS" signature="TestResultAfterTestMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="TestResultAfterTestMethod" is-config="true" duration-ms="1" started-at="2019-01-02T23:56:19Z" finished-at="2019-01-02T23:56:19Z">
+        <test-method status="PASS" signature="TestResultAfterTestMethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="TestResultAfterTestMethod" is-config="true" duration-ms="0" started-at="2019-01-04T02:47:58Z" finished-at="2019-01-04T02:47:58Z">
           <params>
             <param index="0">
               <value>
@@ -88,7 +82,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- TestResultAfterTestMethod -->
-        <test-method status="PASS" signature="End()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="End" is-config="true" duration-ms="5784" started-at="2019-01-02T23:56:19Z" finished-at="2019-01-02T23:56:25Z">
+        <test-method status="PASS" signature="End()[pri:0, instance:com.appium.demo.rbc.appiumrbcdemo.tests.ShopByCategoryTestCases@794cb805]" name="End" is-config="true" duration-ms="5951" started-at="2019-01-04T02:47:58Z" finished-at="2019-01-04T02:48:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- End -->

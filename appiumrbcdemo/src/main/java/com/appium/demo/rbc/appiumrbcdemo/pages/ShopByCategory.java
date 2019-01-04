@@ -68,9 +68,7 @@ public class ShopByCategory extends MobileActionMethods{
 	    	catch(Exception e) {
 	    		e.printStackTrace();
 	    		assersion.takeScreenShot();
-	    		log.error("Failed to navigate to the Shop by Kindle Items and the Test Fails");
-
-	    		
+	    		log.error("Failed to navigate to the Shop by Kindle Items and the Test Fails");    		
 	    	}
 	    	return blnVerify;
 	    }

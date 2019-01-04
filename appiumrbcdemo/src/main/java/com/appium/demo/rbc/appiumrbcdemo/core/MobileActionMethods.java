@@ -30,6 +30,7 @@ public class MobileActionMethods {
 	 private AppiumDriver<MobileElement> driver;
 	 
 	 public static Logger log = Logger.getLogger(Log.class.getName());
+	 
 	 public CustomAssersion assersion;
 
 	

@@ -6,6 +6,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -23,7 +24,8 @@ public class CustomAssersion extends Assertion{
 	
 	 private AppiumDriver<MobileElement> driver;
 	 
-	    
+	 public static Logger log = Logger.getLogger(Log.class.getName());
+	 	    
 	    //Initilize the Elements using Page Factory
 	    
 	    public CustomAssersion(AppiumDriver<MobileElement> driver) {
@@ -34,20 +36,20 @@ public class CustomAssersion extends Assertion{
 		
 		@Override
 		public void onBeforeAssert(IAssert a) {
-		System.out.println("The Expected Messsage is:"+a.getExpected());
+			log.info("The Expected Messsage is:"+a.getExpected());
 		}
 
 		
 		//On Assert Failure it will take the screen shot
 		@Override
 		public void onAssertFailure(IAssert assertCommand) {
-			System.out.println("The Expected Messsage is:"+assertCommand.getExpected()+" anf the Actual Message is +" +assertCommand.getActual());			
+			log.error("The Expected Messsage is:"+assertCommand.getExpected()+" anf the Actual Message is +" +assertCommand.getActual());			
 			takeScreenShot();
 		}
 
 		@Override
 		public void onAssertSuccess(IAssert a) {
-			System.out.println("The Expected Messsage is:"+a.getExpected()+" anf the Actual Message is +" +a.getActual());
+			log.info("The Expected Messsage is:"+a.getExpected()+" and the Actual Message is +" + a.getActual());
 
 	}
 		
