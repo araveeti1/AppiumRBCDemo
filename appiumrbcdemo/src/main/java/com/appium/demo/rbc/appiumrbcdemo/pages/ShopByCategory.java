@@ -47,12 +47,9 @@ public class ShopByCategory extends MobileActionMethods{
 	    @AndroidFindBy(xpath = "//android.view.View[@text='Kindle E-Readers']")
 
 	    private MobileElement btnEreader;
+	    private String items  = "//android.view.View[contains(@text, 'Display')]";
 	    
-	    //@AndroidFindBy(xpath = "//android.view.View[@text='Results in Kindle E-readers']")
-	  //  private MobileElement labelResults;	    
 	    
-	    //@AndroidFindBy(xpath = "//android.view.View[contains(@text, 'Display')]")
-	    //private String itemsKindle;
 	    
 	    
 	    
@@ -80,7 +77,7 @@ public class ShopByCategory extends MobileActionMethods{
 	    	
 	    	boolean blnVerify = false;
 	    	try {
-	    		assersion.assertNotEquals(driver.findElements(By.xpath("//android.view.View[contains(@text, 'Display')]")).size(), 0, "The Kindle Items are not present in the List and the Test Fails");
+	    		assersion.assertNotEquals(driver.findElements(By.xpath(items)).size(), 0, "The Kindle Items are not present in the List and the Test Fails");
 	    		log.info("Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful");
 	    		closeApp();
 	    		blnVerify = true;
