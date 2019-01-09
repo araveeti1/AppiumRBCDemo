@@ -159,3 +159,38 @@
 03 Jan 2019 21:52:45,465 ERROR [main] org.apache.commons.logging.Log.navigateToShopByCategory (54)  - Failed to navigate to the Shop by Category Screen
 03 Jan 2019 21:52:45,961 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (150)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']})
 03 Jan 2019 21:54:06,657 ERROR [main] org.apache.commons.logging.Log.waitForElementClickable (157)  - Exception is thrown at run time and the test Fails
+08 Jan 2019 22:49:16,149 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (150)  - Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button})
+08 Jan 2019 22:49:19,900 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) Has been clicked successfully
+08 Jan 2019 22:49:19,901 INFO  [main] org.apache.commons.logging.Log.skipSignin (44)  - Successfully clicked on the Skip Sign in Button
+08 Jan 2019 22:49:21,010 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (150)  - Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon})
+08 Jan 2019 22:49:26,452 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) Has been clicked successfully
+08 Jan 2019 22:49:26,453 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (150)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']})
+08 Jan 2019 22:49:29,587 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) Has been clicked successfully
+08 Jan 2019 22:49:29,587 INFO  [main] org.apache.commons.logging.Log.navigateToShopByCategory (49)  - Successfully navigated to the Shop by Category screen
+08 Jan 2019 22:49:29,587 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (150)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']})
+08 Jan 2019 22:49:35,043 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) Has been clicked successfully
+08 Jan 2019 22:49:35,044 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (150)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']})
+08 Jan 2019 22:49:37,357 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) Has been clicked successfully
+08 Jan 2019 22:49:37,357 INFO  [main] org.apache.commons.logging.Log.navigateToShopByKindle (62)  - Successfully Navigated to the Shop by Kindle Items
+08 Jan 2019 22:49:41,000 INFO  [main] org.apache.commons.logging.Log.onBeforeAssert (39)  - The Expected Messsage is:0
+08 Jan 2019 22:49:41,004 INFO  [main] org.apache.commons.logging.Log.onAssertSuccess (52)  - The Expected Messsage is:0 and the Actual Message is +4
+08 Jan 2019 22:49:41,004 INFO  [main] org.apache.commons.logging.Log.verifyKindleItems (81)  - Successfully Verified the presence of the Kindle Items on the amazon app and the test case is successful
+08 Jan 2019 22:49:43,142 INFO  [main] org.apache.commons.logging.Log.closeApp (126)  - Successfully closed the App 
+08 Jan 2019 23:15:55,979 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (154)  - Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button})
+08 Jan 2019 23:16:00,678 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/skip_sign_in_button}) Has been clicked successfully
+08 Jan 2019 23:16:00,679 INFO  [main] org.apache.commons.logging.Log.skipSignin (44)  - Successfully clicked on the Skip Sign in Button
+08 Jan 2019 23:16:01,967 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (154)  - Waiting for the element  ::Located by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon})
+08 Jan 2019 23:16:07,470 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.id: in.amazon.mShop.android.shopping:id/action_bar_burger_icon}) Has been clicked successfully
+08 Jan 2019 23:16:07,471 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (154)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']})
+08 Jan 2019 23:16:11,071 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.xpath: //android.widget.TextView[@text='Shop by Category']}) Has been clicked successfully
+08 Jan 2019 23:16:11,071 INFO  [main] org.apache.commons.logging.Log.navigateToShopByCategory (49)  - Successfully navigated to the Shop by Category screen
+08 Jan 2019 23:16:11,072 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (154)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']})
+08 Jan 2019 23:16:17,148 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers & eBooks']}) Has been clicked successfully
+08 Jan 2019 23:16:17,154 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (154)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']})
+08 Jan 2019 23:16:19,474 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.xpath: //android.view.View[@text='Kindle E-Readers']}) Has been clicked successfully
+08 Jan 2019 23:16:19,474 INFO  [main] org.apache.commons.logging.Log.navigateToShopByKindle (63)  - Successfully Navigated to the Shop by Kindle Items
+08 Jan 2019 23:16:19,475 INFO  [main] org.apache.commons.logging.Log.waitForElementClickable (154)  - Waiting for the element  ::Located by By.chained({By.xpath: //android.view.View[contains(@text, 'Kindle E-reader - Black')]})
+08 Jan 2019 23:16:23,467 INFO  [main] org.apache.commons.logging.Log.click (53)  - The elementLocated by By.chained({By.xpath: //android.view.View[contains(@text, 'Kindle E-reader - Black')]}) Has been clicked successfully
+08 Jan 2019 23:16:23,467 INFO  [main] org.apache.commons.logging.Log.chooseItem (82)  - Successfully Clicked on the Kindle Item on the amazon app
+08 Jan 2019 23:16:23,470 INFO  [main] org.apache.commons.logging.Log.verifyElementPresence (175)  - Verifying the Presence of ElementLocated by By.chained({By.xpath: //android.view.View[@text='In stock.']})
+08 Jan 2019 23:16:30,643 INFO  [main] org.apache.commons.logging.Log.verifyItemAvailability (99)  - Successfully Verified the Item Availability and the Test Passed
